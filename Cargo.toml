@@ -1,0 +1,22 @@
+[package]
+name = "ufc"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sha2 = "0.10"
+md-5 = "0.10"
+kv = "0.24.0"
+regex = "1"
+filetime = "0.2"
+byte-unit = "4.0.14"
+tempfile = "3.3.0"
+queues = "1.1.0"
+rayon = "1"
+indicatif = "0.17.2"
+rand = "0.8.5"
+console = "0.15.2"
+clap = { version = "4.5.4", features = ["derive"] }
+num_cpus = "1.16.0"
