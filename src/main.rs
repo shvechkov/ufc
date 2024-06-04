@@ -33,7 +33,6 @@ fn help() -> i32 {
     -1
 }
 
-
 const READ_BLK_SIZE: usize = 4096;
 
 struct FileScanStats {
@@ -312,7 +311,6 @@ fn scan_dir(
     Ok(0)
 }
 
-
 #[derive(Debug, Clone)]
 struct ScanDirArgs {
     mt: bool,
@@ -439,14 +437,14 @@ fn scan_dir_progress(
 }
 
 #[derive(Parser)]
-#[command(name = "ufc", version = "0.1", author = "Alexey Shvechkov")]
+#[command(name = "ufc", version = "0.1", author = "Alexey Shvechkov ")]
 #[command(about = "ufc (unique file copy) - Copies unique files from src_dir to dst_dir. Destination has k/v store containing pairs md5<->path", long_about = None)]
 struct Args {
     /// source directory with potential duplicates
     #[arg(short, long)]
     src_dir: Option<String>,
 
-    /// destination directory where unique files will be stored
+    /// destination directory where unique files will be stor   ed
     #[arg(short, long)]
     dst_dir: Option<String>,
 
@@ -556,10 +554,10 @@ fn main() {
     };
 
     if args.mt {
-            match cli.tn{
-                Some(x) => args.threads_num = x,
-                None => args.threads_num = num_cpus::get() as u32, // get CPU numbers
-            }
+        match cli.tn {
+            Some(x) => args.threads_num = x,
+            None => args.threads_num = num_cpus::get() as u32, // get CPU numbers
+        }
     }
 
     match cli.name {
